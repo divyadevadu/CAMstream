@@ -75,6 +75,6 @@ select_fps()
 select_resolution()
 command = 'ffmpeg -f video4linux2 -i /dev/video%s \
             -r %d -s %s -f mjpeg -qscale 5 - \
-            2>/dev/null | ./streameye'%(VIDEO_DEV,FPS,RESOLUTION)
+            2>/dev/null | ./stream'%(VIDEO_DEV,FPS,RESOLUTION)
 
 execute(command)
